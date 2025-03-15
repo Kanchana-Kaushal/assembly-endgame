@@ -129,7 +129,14 @@ function App() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-black text-white">
       <main className="max-w-3xl bg-gray-900 p-4 md:rounded-2xl lg:p-8">
-        {isGameWon && <Confetti recycle={false} numberOfPieces={1000} />}
+        {isGameWon && (
+          <Confetti
+            recycle={false}
+            numberOfPieces={1000}
+            width={screen.width - 10}
+            height={screen.height - 10}
+          />
+        )}
         <div className="mx-auto flex max-w-md flex-col items-center justify-center">
           <header className="text-center">
             <h1 className="text-xl font-bold">Assembly Endgame</h1>
